@@ -1,33 +1,25 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
-
-    return (
-        <div>
-        <Navbar>
-            <NavbarBrand href="/">JOZ-JMSv2 Components Library</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-            <Nav className="me-auto" navbar>
-                <NavItem>
-                <NavLink href="/query-builder/">Query Builder</NavLink>
-                </NavItem>
-            </Nav>
-            </Collapse>
-        </Navbar>
-        </div>
-    );
+  return (
+    <Navbar collapseOnSelect bg="dark" variant="dark">
+      <Container fluid>
+        <Navbar.Brand href="/">
+          <span className="d-block my-0 py-0 fs-4">JMSv2</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse className="me-6">
+          <Nav className="me-auto">
+            <NavDropdown title="Components">
+              <NavDropdown.Item href="/query-builder">
+                Query Builder
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
 export default Header;

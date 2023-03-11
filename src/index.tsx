@@ -1,16 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Header from './Components/Page/Header';
-import Querier from './Components/Querier/Querier';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Header from "./Components/Page/Header";
+import QueryBuilder from "./Components/QueryBuilder/QueryBuilder";
 
 const router = createBrowserRouter([
   {
@@ -19,17 +17,21 @@ const router = createBrowserRouter([
   },
   {
     path: "/query-builder",
-    element: <Querier />,
+    element: <QueryBuilder />,
   },
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Header />
-    <RouterProvider router={router} />
+    <Container fluid className="mx-auto p-0">
+      <Header />
+      <main className="m-2 p-2">
+        <RouterProvider router={router} />
+      </main>
+    </Container>
   </React.StrictMode>
 );
 
