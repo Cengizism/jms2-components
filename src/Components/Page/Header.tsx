@@ -7,7 +7,7 @@ function Header() {
         <Navbar.Brand href="/">
           <span className="d-block my-0 py-0 fs-4">JMSv2</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="me-6">
           <Nav className="me-auto">
             <NavDropdown title="Components">
@@ -16,7 +16,7 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   );
