@@ -13,7 +13,7 @@ function App() {
         </Container>
       </Navbar>
       <main className="m-2 p-2">
-        <Tab.Container defaultActiveKey="query_builder">
+        <Tab.Container defaultActiveKey="route_map">
           <Row>
             <Col sm={2}>
               <Nav variant="pills" className="flex-column">
