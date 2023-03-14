@@ -1,6 +1,7 @@
 import { Container, Row, Col, Navbar, Nav, Tab } from "react-bootstrap";
 import QueryBuilder from "./Components/QueryBuilder/QueryBuilder";
 import RouteMap from "./Components/RouteMap/RouteMap";
+import ApexCharts from "./Components/ApexCharts/ApexCharts";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
                 <Nav.Item>
                   <Nav.Link eventKey="route_map">Route map</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="apex_charts">Apex Charts</Nav.Link>
+                </Nav.Item>
               </Nav>
             </Col>
             <Col sm={10}>
@@ -32,6 +36,9 @@ function App() {
                 </Tab.Pane>
                 <Tab.Pane eventKey="route_map">
                   <RouteMap />
+                </Tab.Pane>
+                <Tab.Pane eventKey="apex_charts">
+                  <ApexCharts />
                 </Tab.Pane>
               </Tab.Content>
             </Col>
