@@ -1450,7 +1450,7 @@ function ApexCharts() {
   ]
   var ts2 = 1484418600000;
   var dates = [];
-  var spikes = [5, -5, 3, -3, 8, -8]
+  // var spikes = [5, -5, 3, -3, 8, -8]
   for (var i = 0; i < 120; i++) {
     ts2 = ts2 + 86400000;
     var innerArr = [ts2, dataSeries[1][i].value];
