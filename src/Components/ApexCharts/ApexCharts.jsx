@@ -18,7 +18,7 @@ function ApexCharts() {
       },
     ],
   };
-  const [barChartData, setBarChartData] = useState(data);
+  const [barChartData] = useState(data);
 
   return (
     <>
